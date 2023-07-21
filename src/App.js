@@ -8,7 +8,7 @@ import Alert from './components/Alert';
 
 function App() {
   const [mode, setMode] = useState ('light');
-
+  
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {
@@ -21,7 +21,7 @@ function App() {
     setTimeout( () => {
       setAlert (null);
     }, 2000);
-
+ 
   const toggleMode = ()=>{
     if (mode === 'light'){
       setMode ('dark');
@@ -33,11 +33,11 @@ function App() {
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enable", "success");
     }
-  }
+  } 
   return (
     <>
 {/* <Router> */}
-  <Navbar title="Mahdi Hasan" about="About Us" mode={mode} toggleMode={toggleMode} />
+  <Navbar title="Mahdi Hasan" about="About Us" mode={mode} toggleMode={toggleMode} /> 
   <Alert alert={alert}/>
   <div className="container my-3"> 
   {/* <Routes> */}
@@ -46,7 +46,7 @@ function App() {
           {/* <Route path="/about" element={<About/>} /> */}
   {/* </Routes> */}
   </div>
-{/* </Router> */}
+{/* </Router> */} 
     </>
   );
 } 
